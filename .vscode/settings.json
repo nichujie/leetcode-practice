@@ -6,6 +6,8 @@
     "initializer_list": "cpp",
     "iterator": "cpp",
     "ostream": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "unordered_map": "cpp",
+    "algorithm": "cpp"
   }
 }
