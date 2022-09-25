@@ -123,17 +123,23 @@ JS/TS 总是充满了各种陷阱。某些在其他语言如吃饭喝水一样�
 
 请观察以下代码:
 
-<img src="./img/js-dim-arr.png" width="50%" align="center" />
+<div align="center">
+<img src="./img/js-dim-arr.png" width="50%" />
+</div>
 
 我们发现，虽然看似成功捏出了一个二维数组，实际上所有的子数组都是一个对象。这其实不能全怪 JS，因为 python 也有类似的问题。
 
 解决方法很简单，我们用 map 来生成就可以了。由于 fill 函数只接受 value，我们还是需要 map 函数来接受一个生成新数组的函数，以保证每次的子数组是一个新对象。
 
-<img src="./img/js-dim-arr-correct.png" width="50%" align="center" />
+<div align="center">
+<img src="./img/js-dim-arr-correct.png" width="50%" />
+</div>
 
 而上图在用 map 生成数组的过程中，仍然有一些小陷阱。比如刚 new 出来的数组里面并不是真的有元素（像其他语言会有默认值占位），而只是把 length 设置了一下。
 
-<img src="./img/js-arr-len.png" width="50%" align="center" />
+<div align="center">
+<img src="./img/js-arr-len.png" width="50%" />
+</div>
 
 由此可以顺道说一下 JS 神奇的数组（JS 的数组（Array）长久以来饱受诟病）。初学者看到上图中的种种操作想必一头雾水，这主要由于 JS 中的数组并非是其他语言中的经典数据结构。
 
